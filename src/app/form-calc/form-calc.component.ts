@@ -33,7 +33,7 @@ export class FormCalcComponent {
       case '-':
         this.res = this.num1 - this.num2;
         break;
-      case 'x':
+      case '*':
         this.res = this.num1 * this.num2;
         break;
       case '/':
