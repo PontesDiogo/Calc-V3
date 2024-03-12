@@ -1,10 +1,23 @@
 <form id="form-calc">
-<input name="num1" type="number" [(ngModel)]="num1" placeholder="Insira um número">     <!-- a bind ngModel só compila se ja tiver sido importado o formsmodel -->
+  <input name="num1" type="number" [(ngModel)]="num1" placeholder="Insira um número">
+
+ <select [(ngModel)]="operation" id="operation" name="operation">
+
+   <option value=""></option>
+   <option value="+">+</option>
+   <option value="-">-</option>
+   <option value="*">*</option>
+   <option value="/">/</option>
+   <option value="%">%</option>
+   <option value="x²">x²</option>
+</select>
+
+  <!-- a bind ngModel só compila se ja tiver sido importado o formsmodel -->
   <input name="num2" type="number" [(ngModel)]="num2" placeholder="Insira um número">
 
-  <button (click)="onClickSum()" id="sum-button" >Somar</button>
-  {{sum}}
+  
+  <button id="res-button" (click)="onChangeRes()">=</button>
+  {{res}}
   {{num1}}
   {{num2}}
 </form>
-
